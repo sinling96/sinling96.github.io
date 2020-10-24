@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Sinling</title>
-    <link>https://sinlingchane.com/categories/tutorial/</link>
+    <link>https://sinlingchan.com/categories/tutorial/</link>
     <description>Recent content in Tutorial on Sinling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchane.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchan.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Text Classification using spaCy (Intro)</title>
-      <link>https://sinlingchane.com/p/spacyintro/</link>
+      <link>https://sinlingchan.com/p/spacyintro/</link>
       <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sinlingchane.com/p/spacyintro/</guid>
+      <guid>https://sinlingchan.com/p/spacyintro/</guid>
       <description>Despite the rapid development of AI technology, there are still a huge amount of text data remained undiscovered. Unstructured data contains a lot of data that would be useful if we know how to transform unstructured data to structured data.
 In today&amp;rsquo;s tutorial, we are going to explore how we can classified text data to specific categories which could be useful for the analysis, by using Python package spaCy.
 What is spaCy?</description>

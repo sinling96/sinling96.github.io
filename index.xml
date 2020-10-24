@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Sinling</title>
-        <link>https://sinlingchane.com/</link>
+        <link>https://sinlingchan.com/</link>
         <description>Recent content on Sinling</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchane.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchan.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Must know shortcut keys in Jupyter Notebook</title>
-        <link>https://sinlingchane.com/p/shortcut-keys-in-jupyter-notebook/</link>
+        <link>https://sinlingchan.com/p/shortcut-keys-in-jupyter-notebook/</link>
         <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://sinlingchane.com/p/shortcut-keys-in-jupyter-notebook/</guid>
+        <guid>https://sinlingchan.com/p/shortcut-keys-in-jupyter-notebook/</guid>
         <description>&lt;p&gt;As a developer, we should always follow the rule:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you start doing some action with the mouse, stop and think if there is a shortcut. If there is one - use it.&lt;/p&gt;
@@ -87,11 +87,11 @@ Go to the Setting &amp;gt; Advanced Settings Editor.&lt;/p&gt;
         </item>
         <item>
         <title>Text Classification using spaCy (Intro)</title>
-        <link>https://sinlingchane.com/p/spacyintro/</link>
+        <link>https://sinlingchan.com/p/spacyintro/</link>
         <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://sinlingchane.com/p/spacyintro/</guid>
-        <description>&lt;img src="https://sinlingchane.com/p/spacyintro/raphael-schaller-GkinCd2enIY-unsplash.jpg" alt="Featured image of post Text Classification using spaCy (Intro)" /&gt;&lt;p&gt;Despite the rapid development of AI technology, there are still a huge amount of text data remained undiscovered. Unstructured data contains a lot of data that would be useful if we know how to transform unstructured data to structured data.&lt;/p&gt;
+        <guid>https://sinlingchan.com/p/spacyintro/</guid>
+        <description>&lt;img src="https://sinlingchan.com/p/spacyintro/raphael-schaller-GkinCd2enIY-unsplash.jpg" alt="Featured image of post Text Classification using spaCy (Intro)" /&gt;&lt;p&gt;Despite the rapid development of AI technology, there are still a huge amount of text data remained undiscovered. Unstructured data contains a lot of data that would be useful if we know how to transform unstructured data to structured data.&lt;/p&gt;
 &lt;p&gt;In today&amp;rsquo;s tutorial, we are going to explore how we can classified text data to specific categories which could be useful for the analysis, by using Python package &lt;a class=&#34;link&#34; href=&#34;https://spacy.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;spaCy&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;what-is-spacy&#34;&gt;What is spaCy?&lt;/h1&gt;
@@ -240,27 +240,27 @@ To solve this issue, I have come up with a solution to make this process more ef
         </item>
         <item>
         <title>Add Keyboard Shortcut R&#39;s Pipe Operator (%&gt;%) to Jupyter Lab</title>
-        <link>https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/</link>
+        <link>https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/</link>
         <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/</guid>
+        <guid>https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/</guid>
         <description>&lt;p&gt;Recently, I have started using JupyterLab to write data science blog posts in both R &amp;amp; Python languages. I have found out that the keyboard shortcut in R Studio for pipe operator (%&amp;gt;%) &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;M&lt;/code&gt; is not working in JupyterLab. Since I am used to %&amp;gt;% shortcut in RStudio, why not I add that into Jupyter Lab?&lt;/p&gt;
 &lt;p&gt;To do this, we would need to edit the settings for JupyterLab&amp;rsquo;s keyboard shortcut plugin.&lt;/p&gt;
 &lt;p&gt;How can we do that?&lt;/p&gt;
 &lt;p&gt;First Step: Go to the &lt;em&gt;Setting &amp;gt; Advanced Settings Editor&lt;/em&gt;.
 &lt;figure&gt;
-		&lt;a href=&#34;https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1.png&#34; data-size=&#34;1366x768&#34;&gt;
-			&lt;img srcset=&#34;https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1_hu4b92ff8d52e86013b5c5668c3cefe433_105010_480x0_resize_box_2.png 480w, https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1_hu4b92ff8d52e86013b5c5668c3cefe433_105010_1024x0_resize_box_2.png 1024w&#34;
-				src=&#34;https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1.png&#34; width=&#34;1366&#34; height=&#34;768&#34; loading=&#34;lazy&#34;
+		&lt;a href=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1.png&#34; data-size=&#34;1366x768&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1_hu4b92ff8d52e86013b5c5668c3cefe433_105010_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1_hu4b92ff8d52e86013b5c5668c3cefe433_105010_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1.png&#34; width=&#34;1366&#34; height=&#34;768&#34; loading=&#34;lazy&#34;
 				alt=&#34;&amp;nbsp;&#34;&gt;
 		&lt;/a&gt;
 		
 	&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Next, click on &lt;em&gt;Keyboard Shortcuts&lt;/em&gt;. You will see two pane side by side: &lt;em&gt;System Default&lt;/em&gt; and &lt;em&gt;User Preference&lt;/em&gt;. 
 &lt;figure&gt;
-		&lt;a href=&#34;https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2.png&#34; data-size=&#34;1366x768&#34;&gt;
-			&lt;img srcset=&#34;https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_480x0_resize_box_2.png 480w, https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_1024x0_resize_box_2.png 1024w&#34;
-				src=&#34;https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2.png&#34; width=&#34;1366&#34; height=&#34;768&#34; loading=&#34;lazy&#34;
+		&lt;a href=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2.png&#34; data-size=&#34;1366x768&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2.png&#34; width=&#34;1366&#34; height=&#34;768&#34; loading=&#34;lazy&#34;
 				alt=&#34;&amp;nbsp;&#34;&gt;
 		&lt;/a&gt;
 		
@@ -286,11 +286,11 @@ To solve this issue, I have come up with a solution to make this process more ef
         </item>
         <item>
         <title>How I Learn R</title>
-        <link>https://sinlingchane.com/p/how-i-learn-r/</link>
+        <link>https://sinlingchan.com/p/how-i-learn-r/</link>
         <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://sinlingchane.com/p/how-i-learn-r/</guid>
-        <description>&lt;img src="https://sinlingchane.com/p/how-i-learn-r/Blog1-Notes.JPG" alt="Featured image of post How I Learn R" /&gt;&lt;p&gt;When I was studying in the university, I learnt R programming to complete my final year project, Text Sentiment Analysis and Topic Modeling. It was a nightmare for me as the tasks were not as easy as I thought, especially for someone without strong foundation in data science programming languages (e.g. R, Python).&lt;/p&gt;
+        <guid>https://sinlingchan.com/p/how-i-learn-r/</guid>
+        <description>&lt;img src="https://sinlingchan.com/p/how-i-learn-r/Blog1-Notes.JPG" alt="Featured image of post How I Learn R" /&gt;&lt;p&gt;When I was studying in the university, I learnt R programming to complete my final year project, Text Sentiment Analysis and Topic Modeling. It was a nightmare for me as the tasks were not as easy as I thought, especially for someone without strong foundation in data science programming languages (e.g. R, Python).&lt;/p&gt;
 &lt;p&gt;For a complete beginner, there are plenty of resources you could easily find to pick up a new programming language. Bad new is sometimes there are too much resources that I just could not make up my mind to just choose one. After more than one year of dealing with R (haha), I thought I should share some of my tips in learning R for data analysis.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1. Read Books&lt;/strong&gt;
 &lt;img src=&#34;https://rstudio-education.github.io/hopr/cover.png&#34; alt=&#34;&#34;  /&gt; 
@@ -298,9 +298,9 @@ For a complete beginner like me, going through &lt;a class=&#34;link&#34; href=&
     &gt;Hands-On Programming with R&lt;/a&gt; is super useful for me! It strengthens my understanding on how R works and how to write a more &amp;ldquo;R-slang&amp;rdquo;-like code. Even though the book is lengthy, it is well structured and written. The programming concepts I learned from this book also build my foundation well that I could easily pick up Python when I started working. A KIND Reminder: &amp;ldquo;Don&amp;rsquo;t skip the hands-on session&amp;rdquo; - This is where you can put theory into practice.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2. Writing Notes&lt;/strong&gt;
 &lt;figure&gt;
-		&lt;a href=&#34;https://sinlingchane.com/p/how-i-learn-r/Blog1-Notes.JPG&#34; data-size=&#34;5472x3648&#34;&gt;
-			&lt;img srcset=&#34;https://sinlingchane.com/p/how-i-learn-r/Blog1-Notes_hu04420f15292caa4f98924444377bc505_3504181_480x0_resize_q75_box.JPG 480w, https://sinlingchane.com/p/how-i-learn-r/Blog1-Notes_hu04420f15292caa4f98924444377bc505_3504181_1024x0_resize_q75_box.JPG 1024w&#34;
-				src=&#34;https://sinlingchane.com/p/how-i-learn-r/Blog1-Notes.JPG&#34; width=&#34;5472&#34; height=&#34;3648&#34; loading=&#34;lazy&#34;
+		&lt;a href=&#34;https://sinlingchan.com/p/how-i-learn-r/Blog1-Notes.JPG&#34; data-size=&#34;5472x3648&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/how-i-learn-r/Blog1-Notes_hu04420f15292caa4f98924444377bc505_3504181_480x0_resize_q75_box.JPG 480w, https://sinlingchan.com/p/how-i-learn-r/Blog1-Notes_hu04420f15292caa4f98924444377bc505_3504181_1024x0_resize_q75_box.JPG 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/how-i-learn-r/Blog1-Notes.JPG&#34; width=&#34;5472&#34; height=&#34;3648&#34; loading=&#34;lazy&#34;
 				alt=&#34;&amp;nbsp;&#34;&gt;
 		&lt;/a&gt;
 		
@@ -312,9 +312,9 @@ Personally, I find writing notes in a my notebook is a great way to learn R. Thi
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;3. Google Search&lt;/strong&gt;
 &lt;figure&gt;
-		&lt;a href=&#34;https://sinlingchane.com/p/how-i-learn-r/Blog1-Google.PNG&#34; data-size=&#34;891x344&#34;&gt;
-			&lt;img srcset=&#34;https://sinlingchane.com/p/how-i-learn-r/Blog1-Google_hu438266ea157327570e661fffa32c83c3_21232_480x0_resize_box_2.PNG 480w, https://sinlingchane.com/p/how-i-learn-r/Blog1-Google_hu438266ea157327570e661fffa32c83c3_21232_1024x0_resize_box_2.PNG 1024w&#34;
-				src=&#34;https://sinlingchane.com/p/how-i-learn-r/Blog1-Google.PNG&#34; width=&#34;891&#34; height=&#34;344&#34; loading=&#34;lazy&#34;
+		&lt;a href=&#34;https://sinlingchan.com/p/how-i-learn-r/Blog1-Google.PNG&#34; data-size=&#34;891x344&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/how-i-learn-r/Blog1-Google_hu438266ea157327570e661fffa32c83c3_21232_480x0_resize_box_2.PNG 480w, https://sinlingchan.com/p/how-i-learn-r/Blog1-Google_hu438266ea157327570e661fffa32c83c3_21232_1024x0_resize_box_2.PNG 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/how-i-learn-r/Blog1-Google.PNG&#34; width=&#34;891&#34; height=&#34;344&#34; loading=&#34;lazy&#34;
 				alt=&#34;&amp;nbsp;&#34;&gt;
 		&lt;/a&gt;
 		
