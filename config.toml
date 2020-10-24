@@ -1,4 +1,4 @@
-baseurl = "https://sinlingchane.com"
+baseurl = "https://sinlingchan.com"
 languageCode = "en-us"
 theme = "hugo-theme-stack"
 paginate = 5
