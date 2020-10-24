@@ -2,7 +2,6 @@
 title: "Add Keyboard Shortcut R's Pipe Operator (%>%) to Jupyter Lab"
 date: 2020-05-12
 slug: "Jupyter Lab Custom Keyboard Shortcut"
-image: the-creative-exchange-d2zvqp3fpro-unsplash.jpg
 tags:
     - R
     - Jupyter Lab
@@ -18,10 +17,10 @@ To do this, we would need to edit the settings for JupyterLab's keyboard shortcu
 How can we do that?
 
 First Step: Go to the *Setting > Advanced Settings Editor*.
-![](/images/B3-1.png)
+![](B3-1.png)
 
 Next, click on *Keyboard Shortcuts*. You will see two pane side by side: *System Default* and *User Preference*. 
-![](/images/B3-2.png)
+![](B3-2.png)
 
 Last step: Paste the following code into the **User Preference** Pane.
 ```

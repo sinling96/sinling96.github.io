@@ -2,7 +2,7 @@
 title: "How I Learn R"
 date: 2020-04-20
 slug: "How I learn R"
-image: helena-hertz-wWZzXlDpMog-unsplash.jpg
+image: Blog1-Notes.JPG
 tags:
     - R
 categories:

@@ -2,7 +2,7 @@
 title: "Text Classification using spaCy (Intro)"
 date: 2020-06-26
 slug: "spacy(intro)"
-image: "pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg"
+image: "raphael-schaller-GkinCd2enIY-unsplash.jpg"
 categories:
     - Tutorial
 tags:
