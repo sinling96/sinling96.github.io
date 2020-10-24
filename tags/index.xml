@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sinling</title>
+    <link>https://example.com/tags/</link>
+    <description>Recent content in Tags on Sinling</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>shortcut</title>
+      <link>https://example.com/tags/shortcut/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/shortcut/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://example.com/tags/nlp/</link>
+      <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spacy</title>
+      <link>https://example.com/tags/spacy/</link>
+      <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/spacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jupyter Lab</title>
+      <link>https://example.com/tags/jupyter-lab/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/jupyter-lab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://example.com/tags/r/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://example.com/tags/tips/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

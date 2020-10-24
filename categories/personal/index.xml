@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on Sinling</title>
+    <link>https://example.com/categories/personal/</link>
+    <description>Recent content in Personal on Sinling</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Learn R</title>
+      <link>https://example.com/p/how-i-learn-r/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/how-i-learn-r/</guid>
+      <description>When I was studying in the university, I learnt R programming to complete my final year project, Text Sentiment Analysis and Topic Modeling. It was a nightmare for me as the tasks were not as easy as I thought, especially for someone without strong foundation in data science programming languages (e.g. R, Python).
+For a complete beginner, there are plenty of resources you could easily find to pick up a new programming language.</description>
+    </item>
+    
+  </channel>
+</rss>

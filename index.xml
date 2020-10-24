@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Sinling</title>
+        <link>https://example.com/</link>
+        <description>Recent content on Sinling</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Must know shortcut keys in Jupyter Notebook</title>
+        <link>https://example.com/p/shortcut-keys-in-jupyter-notebook/</link>
+        <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/shortcut-keys-in-jupyter-notebook/</guid>
+        <description>&lt;p&gt;As a developer, we should always follow the rule:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you start doing some action with the mouse, stop and think if there is a shortcut. If there is one - use it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this document, I will list down several shortcut that I find useful in navigating Jupyter Notebook.&lt;/p&gt;
+&lt;p&gt;Note: These shortcut can be applied to both Jupyter Notebook and Jupyter Lab, except for the customized shortcut, which is only available in Jupyter Lab as far as I understand.&lt;/p&gt;
+&lt;h2 id=&#34;1-convert-cell-to-md&#34;&gt;1. Convert cell to md&lt;/h2&gt;
+&lt;p&gt;As a data analysts, I used both code and markdown very frequently in my notebook. By default, all the cells in Jupyter notebook is code. To convert it to a markdown cell, we can use the UI (dropdown) to select markdown. 
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+Alternatively, use a shortcut:
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+Shortcut: &lt;code&gt;Esc + m&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-run-target-cell&#34;&gt;2. Run target cell&lt;/h2&gt;
+&lt;p&gt;Shortcut: &lt;code&gt;Ctrl + Enter&lt;/code&gt;
+Alternatively, you can click the Execute cell icon and select Run Cell.&lt;/p&gt;
+&lt;h2 id=&#34;3-run-all-code&#34;&gt;3. Run all code&lt;/h2&gt;
+&lt;p&gt;Shortcut:  &lt;code&gt;Ctrl + Shift + Alt + Enter&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-run-cell-move-to-next-cell&#34;&gt;4. Run cell, move to next cell&lt;/h2&gt;
+&lt;p&gt;Shortcut: &lt;code&gt;Shift + Enter&lt;/code&gt;
+This allows us the run several cells faster, and create a new cell if it has reached the end.&lt;/p&gt;
+&lt;h1 id=&#34;more-customized-shortcut-keys&#34;&gt;More customized shortcut keys&amp;hellip;&lt;/h1&gt;
+&lt;h2 id=&#34;5-run-all-below--run-all-above&#34;&gt;5. Run all below / Run all above&lt;/h2&gt;
+&lt;p&gt;To do this, open your JupyterLab window.
+Go to the Setting &amp;gt; Advanced Settings Editor.&lt;/p&gt;
+&lt;p&gt;Next, click on Keyboard Shortcuts. You will see two pane side by side: System Default and User Preference.&lt;/p&gt;
+&lt;p&gt;Finally, paste the following code into the User Preference Pane.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;nt&#34;&gt;&amp;#34;shortcuts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;notebook:run-all-below&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;keys&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;Ctrl Shift ArrowDown&amp;#34;&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;selector&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[data-jp-code-runner]&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;notebook:run-all-above&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;keys&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;Ctrl Shift ArrowUp&amp;#34;&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;selector&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[data-jp-code-runner]&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;6-add-cell-below-above&#34;&gt;6. Add cell below/ above&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;shortcuts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;notebook:insert-cell-below&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;keys&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;Ctrl ArrowDown&amp;#34;&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;selector&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;.jp-Notebook:focus&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;notebook:insert-cell-above&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;keys&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;Ctrl ArrowUp&amp;#34;&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;selector&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;.jp-Notebook:focus&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To learn more about Jupyter shortcut, refer to this &lt;a class=&#34;link&#34; href=&#34;http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;article&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To learn how to add keyboard shortcut for R pipe operator %&amp;gt;%, refer to my another &lt;a class=&#34;link&#34; href=&#34;https://sinlingchan.com/posts/2-add-keyboard-shortcut-r-pipe-operator-to-jupyterlab/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog post&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Text Classification using spaCy (Intro)</title>
+        <link>https://example.com/p/spacyintro/</link>
+        <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/spacyintro/</guid>
+        <description>&lt;img src="https://example.com/p/spacyintro/raphael-schaller-GkinCd2enIY-unsplash.jpg" alt="Featured image of post Text Classification using spaCy (Intro)" /&gt;&lt;p&gt;Despite the rapid development of AI technology, there are still a huge amount of text data remained undiscovered. Unstructured data contains a lot of data that would be useful if we know how to transform unstructured data to structured data.&lt;/p&gt;
+&lt;p&gt;In today&amp;rsquo;s tutorial, we are going to explore how we can classified text data to specific categories which could be useful for the analysis, by using Python package &lt;a class=&#34;link&#34; href=&#34;https://spacy.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;spaCy&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;what-is-spacy&#34;&gt;What is spaCy?&lt;/h1&gt;
+&lt;p&gt;spaCy is an open source Natural Language Processing library for Python. It is designed for industrial-scale NLP usage, which performs NLP processes efficiently.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will focus more on rule-based matching, where we will detect and classify documents based on the rules. These rules works pretty much similar to regex, but with additional functionalities such as relationships between token which are pretty handfull in some use case.&lt;/p&gt;
+&lt;p&gt;If you would like to understand more about rule based matching, feel free to jump into the &lt;a class=&#34;link&#34; href=&#34;https://spacy.io/usage/rule-based-matching&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On a side note, spaCy do provide online courses: &lt;a class=&#34;link&#34; href=&#34;https://course.spacy.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Advanced NLP with spaCy&lt;/a&gt; if you are interested to learn. You will be learning how to use spaCy to build advanced natural language understanding systems, using both rule-based and machine learning approaches.&lt;/p&gt;
+&lt;h2 id=&#34;spacy--model-installation&#34;&gt;spaCy + Model Installation&lt;/h2&gt;
+&lt;p&gt;Before we begin, let&amp;rsquo;s install spacy and english language model.&lt;!-- raw HTML omitted --&gt;
+FYI, spaCy supports 15 language models: including English, Chinese, Portugese, French, etc. To understand more on the models, please visit spaCy &lt;a class=&#34;link&#34; href=&#34;https://spacy.io/usage/models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install spacy
+py -m spacy download en_core_web_sm
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;load-library&#34;&gt;Load Library&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;spacy&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;nlp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spacy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;en_core_web_sm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;get-started&#34;&gt;Get Started&lt;/h1&gt;
+&lt;p&gt;Now that you have your spaCy installed, we will begin to detect the text based on some rules. This is known as Rule-Based Matching in spaCy. These rules works pretty much similar to regex, but with additional functionalities such as relationships between token which are pretty handfull in some use case.&lt;/p&gt;
+&lt;p&gt;If you would like to understand more about rule based matching, feel free to jump into the &lt;a class=&#34;link&#34; href=&#34;https://spacy.io/usage/rule-based-matching&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;objective&#34;&gt;Objective&lt;/h1&gt;
+&lt;p&gt;The objective of this tutorial is to &lt;strong&gt;detect the sentiment of the review&lt;/strong&gt; using rule-based matching in spaCy. Well, spaCy rule matching is definitely not be the best way to detect sentiment in the text, but we are just using it as a use case to demo how we can use spaCy for text classification. 
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+One of the application of this would be classifying &lt;strong&gt;Work from Home Difficulties&lt;/strong&gt; into categories such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Network Issues&lt;/li&gt;
+&lt;li&gt;Communication Issues&lt;/li&gt;
+&lt;li&gt;Lack of Tool&lt;/li&gt;
+&lt;li&gt;Personal Preference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-import-data&#34;&gt;1. Import Data&lt;/h2&gt;
+&lt;p&gt;Firstly, we will need to import our text data. &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+For the tutorial today, we are going to use &lt;a class=&#34;link&#34; href=&#34;https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;imdb movie review dataset&lt;/a&gt; for demonstration, which I downlaoded from Kaggle.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandas&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Users\sinlingchan\Desktop\Workspace\NLP Documentation\resources\IMDB Dataset.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# always check the data when you import in&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Check the number of observations&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Number of rows:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shape&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Number of rows: 50000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As there are 50k records in this dataset, which will be time consuming to run during development. I would suggest to subset the data to may be 1k first.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Before we proceed further, it is important that we understand some of the common key terms in NLP.&lt;/p&gt;
+&lt;h3 id=&#34;familiarize-with-nlp-terms&#34;&gt;Familiarize with NLP Terms&lt;/h3&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+In NLP context,
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Token&lt;/strong&gt; refers to a single word.
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;strong&gt;Document&lt;/strong&gt; refers to a combinations of tokens.
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Corpus&lt;/strong&gt; refers to a combination of documents.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# this is a document&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;review&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;&#39;I thought this was a wonderful way to spend time on a too hot summer weekend, sitting in the air conditioned theater and watching a light-hearted comedy. The plot is simplistic, but the dialogue is witty and the characters are likable (even the well bread suspected serial killer). While some may be disappointed when they realize this is not Match Point 2: Risk Addiction, I thought it was proof that Woody Allen is still fully in control of the style many of us have grown to love.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;This was the most I\&#39;d laughed at one of Woody\&#39;s comedies in years (dare I say a decade?). While I\&#39;ve never been impressed with Scarlet Johanson, in this she managed to tone down her &amp;quot;sexy&amp;quot; image and jumped right into a average, but spirited young woman.&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;This may not be the crown jewel of his career, but it was wittier than &amp;quot;Devil Wears Prada&amp;quot; and more interesting than &amp;quot;Superman&amp;quot; a great comedy to go see with friends.&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# this is a token&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;token_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;token&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;doc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;This is the first token:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;token_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;This is the first token: I
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-initialise-matcher-engine-br&#34;&gt;2. Initialise matcher engine &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Next, we would need to initialise the rule-matching engine - &amp;ldquo;Matcher&amp;rdquo; before we could use them.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;spacy.matcher&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Matcher&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;matcher&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Matcher&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nlp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vocab&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;validate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-add-rules-to-matcher-engine&#34;&gt;3. Add rules to matcher engine&lt;/h2&gt;
+&lt;p&gt;Remember our objective is to detect text sentiment, so now let say I know the word &amp;ldquo;wonder&amp;rdquo; usually infers positive sentiment. We can now define a rule to add to Matcher.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;rule&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;LOWER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;wonder&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#define rule&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;matcher&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Positive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#add rule to matcher&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-process-text&#34;&gt;4. Process Text&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;doc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nlp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;review&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#process text&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;matches&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matcher&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;doc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[(12522029899379299251, 5, 6)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The matcher returns a list of (match_id, start, end) tuples. In our case, [(&amp;lsquo;12522029899379299251&amp;rsquo;, 5, 6)], which maps to the span doc[5:6] of our original document.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;match_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;string_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nlp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vocab&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;match_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Get string representation&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;doc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# The matched span&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;match_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;string_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;12522029899379299251 Positive 5 6 wonderful
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we loop through the tuples, we can find the token that matched the rule &amp;ndash; &lt;em&gt;wonderful&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;process-all-the-reviews&#34;&gt;Process all the reviews&lt;/h3&gt;
+&lt;p&gt;Now we can find all the document that matched the rule.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;all_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;review&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tolist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# print(all_text)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;detectable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nlp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;all_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matcher&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;non_detectable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nlp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pipe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;all_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matcher&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Total: &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;all_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Detected: &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;detectable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Undetected: &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;non_detectable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Total:  1000 
+ Detected:  86 
+ Undetected:  914
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-text-classification&#34;&gt;5. Text Classification&lt;/h2&gt;
+&lt;p&gt;From the result, 86 documents matched the rule. We can now categorise these text as &amp;ldquo;Positive&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;positive&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;review&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iloc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;detectable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;positive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Positive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+        &lt;span class=&#34;n&#34;&gt;positive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DataFrame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;review&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;all_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sentiment&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#transform to dataframe&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;sentiment&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Positive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;tedious&#34;&gt;Tedious?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Congratulations!&lt;/strong&gt; Now we are able to use spaCy&amp;rsquo;s rule-matching feature to detect pattern in the text for text classification. However, I find that defining rules and adding it into matching engine is quite tedious. Imagine if we have more than 20 or 100 rules, how many line of codes we are going to repeat in this step? &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+To solve this issue, I have come up with a solution to make this process more efficient. I&amp;rsquo;ll write up an article on this topic soon. Stay tune! :D&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Add Keyboard Shortcut R&#39;s Pipe Operator (%&gt;%) to Jupyter Lab</title>
+        <link>https://example.com/p/jupyter-lab-custom-keyboard-shortcut/</link>
+        <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/jupyter-lab-custom-keyboard-shortcut/</guid>
+        <description>&lt;p&gt;Recently, I have started using JupyterLab to write data science blog posts in both R &amp;amp; Python languages. I have found out that the keyboard shortcut in R Studio for pipe operator (%&amp;gt;%) &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;M&lt;/code&gt; is not working in JupyterLab. Since I am used to %&amp;gt;% shortcut in RStudio, why not I add that into Jupyter Lab?&lt;/p&gt;
+&lt;p&gt;To do this, we would need to edit the settings for JupyterLab&amp;rsquo;s keyboard shortcut plugin.&lt;/p&gt;
+&lt;p&gt;How can we do that?&lt;/p&gt;
+&lt;p&gt;First Step: Go to the &lt;em&gt;Setting &amp;gt; Advanced Settings Editor&lt;/em&gt;.
+&lt;figure&gt;
+		&lt;a href=&#34;https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1.png&#34; data-size=&#34;1366x768&#34;&gt;
+			&lt;img srcset=&#34;https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1_hu4b92ff8d52e86013b5c5668c3cefe433_105010_480x0_resize_box_2.png 480w, https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1_hu4b92ff8d52e86013b5c5668c3cefe433_105010_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-1.png&#34; width=&#34;1366&#34; height=&#34;768&#34; loading=&#34;lazy&#34;
+				alt=&#34;&amp;nbsp;&#34;&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Next, click on &lt;em&gt;Keyboard Shortcuts&lt;/em&gt;. You will see two pane side by side: &lt;em&gt;System Default&lt;/em&gt; and &lt;em&gt;User Preference&lt;/em&gt;. 
+&lt;figure&gt;
+		&lt;a href=&#34;https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2.png&#34; data-size=&#34;1366x768&#34;&gt;
+			&lt;img srcset=&#34;https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_480x0_resize_box_2.png 480w, https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://example.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2.png&#34; width=&#34;1366&#34; height=&#34;768&#34; loading=&#34;lazy&#34;
+				alt=&#34;&amp;nbsp;&#34;&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Last step: Paste the following code into the &lt;strong&gt;User Preference&lt;/strong&gt; Pane.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;shortcuts&amp;quot;: [
+         {
+            &amp;quot;command&amp;quot;: &amp;quot;notebook:replace-selection&amp;quot;,
+            &amp;quot;selector&amp;quot;: &amp;quot;.jp-Notebook&amp;quot;,
+            &amp;quot;keys&amp;quot;: [&amp;quot;Ctrl Shift M&amp;quot;],
+            &amp;quot;args&amp;quot;: {&amp;quot;text&amp;quot;: &#39;%&amp;gt;% &#39;}
+        }
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you are able to use the keyboard shortcut!&lt;/p&gt;
+&lt;h4 id=&#34;reference&#34;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jupyterlab/jupyterlab/pull/7908&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JupyterLab Github Issues&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>How I Learn R</title>
+        <link>https://example.com/p/how-i-learn-r/</link>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/how-i-learn-r/</guid>
+        <description>&lt;img src="https://example.com/p/how-i-learn-r/Blog1-Notes.JPG" alt="Featured image of post How I Learn R" /&gt;&lt;p&gt;When I was studying in the university, I learnt R programming to complete my final year project, Text Sentiment Analysis and Topic Modeling. It was a nightmare for me as the tasks were not as easy as I thought, especially for someone without strong foundation in data science programming languages (e.g. R, Python).&lt;/p&gt;
+&lt;p&gt;For a complete beginner, there are plenty of resources you could easily find to pick up a new programming language. Bad new is sometimes there are too much resources that I just could not make up my mind to just choose one. After more than one year of dealing with R (haha), I thought I should share some of my tips in learning R for data analysis.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Read Books&lt;/strong&gt;
+&lt;img src=&#34;https://rstudio-education.github.io/hopr/cover.png&#34; alt=&#34;&#34;  /&gt; 
+For a complete beginner like me, going through &lt;a class=&#34;link&#34; href=&#34;https://rstudio-education.github.io/hopr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hands-On Programming with R&lt;/a&gt; is super useful for me! It strengthens my understanding on how R works and how to write a more &amp;ldquo;R-slang&amp;rdquo;-like code. Even though the book is lengthy, it is well structured and written. The programming concepts I learned from this book also build my foundation well that I could easily pick up Python when I started working. A KIND Reminder: &amp;ldquo;Don&amp;rsquo;t skip the hands-on session&amp;rdquo; - This is where you can put theory into practice.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Writing Notes&lt;/strong&gt;
+&lt;figure&gt;
+		&lt;a href=&#34;https://example.com/p/how-i-learn-r/Blog1-Notes.JPG&#34; data-size=&#34;5472x3648&#34;&gt;
+			&lt;img srcset=&#34;https://example.com/p/how-i-learn-r/Blog1-Notes_hu04420f15292caa4f98924444377bc505_3504181_480x0_resize_q75_box.JPG 480w, https://example.com/p/how-i-learn-r/Blog1-Notes_hu04420f15292caa4f98924444377bc505_3504181_1024x0_resize_q75_box.JPG 1024w&#34;
+				src=&#34;https://example.com/p/how-i-learn-r/Blog1-Notes.JPG&#34; width=&#34;5472&#34; height=&#34;3648&#34; loading=&#34;lazy&#34;
+				alt=&#34;&amp;nbsp;&#34;&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;
+Personally, I find writing notes in a my notebook is a great way to learn R. Things that I would jot down in my notebook are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Concepts that I would take more time to digest&lt;/li&gt;
+&lt;li&gt;Solution(s) related to an specific issue/ topic that I find useful _(Usually these will be the solution I found online or written by me)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Google Search&lt;/strong&gt;
+&lt;figure&gt;
+		&lt;a href=&#34;https://example.com/p/how-i-learn-r/Blog1-Google.PNG&#34; data-size=&#34;891x344&#34;&gt;
+			&lt;img srcset=&#34;https://example.com/p/how-i-learn-r/Blog1-Google_hu438266ea157327570e661fffa32c83c3_21232_480x0_resize_box_2.PNG 480w, https://example.com/p/how-i-learn-r/Blog1-Google_hu438266ea157327570e661fffa32c83c3_21232_1024x0_resize_box_2.PNG 1024w&#34;
+				src=&#34;https://example.com/p/how-i-learn-r/Blog1-Google.PNG&#34; width=&#34;891&#34; height=&#34;344&#34; loading=&#34;lazy&#34;
+				alt=&#34;&amp;nbsp;&#34;&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;
+Learn how to debug your error by looking for solution on Google. Site such as StackOverFlow, R-bloggers.com are some  of the sites that I visited very frequent when I am coding R.&lt;/p&gt;
+&lt;p&gt;Pretty simple tips!  Be determined and consistent &amp;amp; you will be a R-Master in no time!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Happy Learning R!&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
