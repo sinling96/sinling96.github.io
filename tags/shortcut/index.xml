@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shortcut on Sinling</title>
-    <link>https://example.com/tags/shortcut/</link>
+    <link>https://sinlingchane.com/tags/shortcut/</link>
     <description>Recent content in shortcut on Sinling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/shortcut/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchane.com/tags/shortcut/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Must know shortcut keys in Jupyter Notebook</title>
-      <link>https://example.com/p/shortcut-keys-in-jupyter-notebook/</link>
+      <link>https://sinlingchane.com/p/shortcut-keys-in-jupyter-notebook/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/shortcut-keys-in-jupyter-notebook/</guid>
+      <guid>https://sinlingchane.com/p/shortcut-keys-in-jupyter-notebook/</guid>
       <description>As a developer, we should always follow the rule:
  If you start doing some action with the mouse, stop and think if there is a shortcut. If there is one - use it.
  In this document, I will list down several shortcut that I find useful in navigating Jupyter Notebook.

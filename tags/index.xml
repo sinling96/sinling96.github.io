@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sinling</title>
-    <link>https://example.com/tags/</link>
+    <link>https://sinlingchane.com/tags/</link>
     <description>Recent content in Tags on Sinling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchane.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>shortcut</title>
-      <link>https://example.com/tags/shortcut/</link>
+      <link>https://sinlingchane.com/tags/shortcut/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/shortcut/</guid>
+      <guid>https://sinlingchane.com/tags/shortcut/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NLP</title>
-      <link>https://example.com/tags/nlp/</link>
+      <link>https://sinlingchane.com/tags/nlp/</link>
       <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/nlp/</guid>
+      <guid>https://sinlingchane.com/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spacy</title>
-      <link>https://example.com/tags/spacy/</link>
+      <link>https://sinlingchane.com/tags/spacy/</link>
       <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/spacy/</guid>
+      <guid>https://sinlingchane.com/tags/spacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jupyter Lab</title>
-      <link>https://example.com/tags/jupyter-lab/</link>
+      <link>https://sinlingchane.com/tags/jupyter-lab/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/jupyter-lab/</guid>
+      <guid>https://sinlingchane.com/tags/jupyter-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://example.com/tags/r/</link>
+      <link>https://sinlingchane.com/tags/r/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/r/</guid>
+      <guid>https://sinlingchane.com/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tips</title>
-      <link>https://example.com/tags/tips/</link>
+      <link>https://sinlingchane.com/tags/tips/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/tips/</guid>
+      <guid>https://sinlingchane.com/tags/tips/</guid>
       <description></description>
     </item>
     

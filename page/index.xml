@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Sinling</title>
-    <link>https://example.com/page/</link>
+    <link>https://sinlingchane.com/page/</link>
     <description>Recent content in Pages on Sinling</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://example.com/page/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://sinlingchane.com/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello!</title>
-      <link>https://example.com/about/</link>
+      <link>https://sinlingchane.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>https://sinlingchane.com/about/</guid>
       <description>I am a data analyst at Teleport. Being a multipotentialiate, I have interests in quite diverse of things:-
  🌱Gardening 👩‍🍳Cooking 📝Blogging 📷 Vlogging - Feel free to follow me @ my youtube channel ShareSLife Data (Of Course!)  I started this blog to document and share my learning journey in data field with you all. Having said that, I try not to limit my knowledge sharing to only data-related stuff.</description>
     </item>
     
     <item>
       <title>Posts</title>
-      <link>https://example.com/posts/</link>
+      <link>https://sinlingchane.com/posts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/</guid>
+      <guid>https://sinlingchane.com/posts/</guid>
       <description></description>
     </item>
     

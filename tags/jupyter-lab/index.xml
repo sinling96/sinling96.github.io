@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jupyter Lab on Sinling</title>
-    <link>https://example.com/tags/jupyter-lab/</link>
+    <link>https://sinlingchane.com/tags/jupyter-lab/</link>
     <description>Recent content in Jupyter Lab on Sinling</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/jupyter-lab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchane.com/tags/jupyter-lab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Add Keyboard Shortcut R&#39;s Pipe Operator (%&gt;%) to Jupyter Lab</title>
-      <link>https://example.com/p/jupyter-lab-custom-keyboard-shortcut/</link>
+      <link>https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/jupyter-lab-custom-keyboard-shortcut/</guid>
+      <guid>https://sinlingchane.com/p/jupyter-lab-custom-keyboard-shortcut/</guid>
       <description>Recently, I have started using JupyterLab to write data science blog posts in both R &amp;amp; Python languages. I have found out that the keyboard shortcut in R Studio for pipe operator (%&amp;gt;%) Ctrl + Shift + M is not working in JupyterLab. Since I am used to %&amp;gt;% shortcut in RStudio, why not I add that into Jupyter Lab?
 To do this, we would need to edit the settings for JupyterLab&amp;rsquo;s keyboard shortcut plugin.</description>
     </item>
