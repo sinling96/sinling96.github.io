@@ -1,37 +1,49 @@
 {{ define "main" }}
-    <h3 class="taxonomy-type section-title">{{ .Type | singularize | humanize }}</h3>
-    <div class="taxonomy-card">
-        <div class="taxonomy-details">
-            <h3 class="taxonomy-count">{{ len .Pages }} post{{ if gt (len .Pages) 1 }}s{{ end }}</h3>
-            <h1 class="taxonomy-term">{{ .Title }}</h1>
-            {{ with .Params.description }}
-                <h2 class="taxonomy-description">{{ . }}</h2>
-            {{ end }}
-        </div>
+<h3 class="taxonomy-type section-title">{{ .Type | singularize | humanize }}</h3>
+<div class="taxonomy-card">
+    <div class="taxonomy-details">
+        <h3 class="taxonomy-count">{{ len .Pages }} post{{ if gt (len .Pages) 1 }}s{{ end }}</h3>
+        <h1 class="taxonomy-term">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <h2 class="taxonomy-description">{{ . }}</h2>
+        {{ end }}
+        <br>
+        <p class="taxonomy-description">
+            <i>Photo by
+                <a href="{{ .Params.creditsAuthorURL }}">
+                    {{ .Params.creditsAuthor }}
+                </a> on
+                <a
+                    href="https://unsplash.com/s/photos/time?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                    Unsplash
+                </a>
+            </i>
+        </p>
+    </div>
 
-        {{- $image := partialCached "helper/image" (dict "Context" . "Type" "taxonomy") .RelPermalink "taxonomy" -}}
-        {{ if $image.exists }}
-            <div class="taxonomy-image">
-                {{ if $image.resource }}   
-                    {{- $thumbnail := $image.resource.Fill "120x120" -}}
-                    <img src="{{ $thumbnail.RelPermalink }}" width="{{ $thumbnail.Width }}"
-                        height="{{ $thumbnail.Height }}" loading="lazy">
-                {{ else }}
-                    <img src="{{ $image.permalink }}" loading="lazy">
-                {{ end }}
-            </div>
+    {{- $image := partialCached "helper/image" (dict "Context" . "Type" "taxonomy") .RelPermalink "taxonomy" -}}
+    {{ if $image.exists }}
+    <div class="taxonomy-image">
+        {{ if $image.resource }}
+        {{- $thumbnail := $image.resource.Fill "120x120" -}}
+        <img src="{{ $thumbnail.RelPermalink }}" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}"
+            loading="lazy">
+        {{ else }}
+        <img src="{{ $image.permalink }}" loading="lazy">
         {{ end }}
     </div>
-    
-    <section class="article-list--compact">
-        {{ $v2 := where .Pages "Params.hidden" "!=" true }}
-        {{ $pag := .Paginate (.Pages) }}
-        {{ range $pag.Pages }}
-            {{ partial "article-list/compact" . }}
-        {{ end }}
-    </section>
-    
-    {{- partial "pagination.html" . -}}
+    {{ end }}
+</div>
 
-    {{ partialCached "footer/footer" . }}
+<section class="article-list--compact">
+    {{ $v2 := where .Pages "Params.hidden" "!=" true }}
+    {{ $pag := .Paginate (.Pages) }}
+    {{ range $pag.Pages }}
+    {{ partial "article-list/compact" . }}
+    {{ end }}
+</section>
+
+{{- partial "pagination.html" . -}}
+
+{{ partialCached "footer/footer" . }}
 {{ end }}
