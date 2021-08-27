@@ -2,7 +2,7 @@
 title: "Text Classification using spaCy (Intro)"
 date: 2020-06-26
 slug: "spacy(intro)"
-image: "raphael-schaller-GkinCd2enIY-unsplash.jpg"
+image: "girl-writing-classroom-quote.jpg"
 categories:
     - Tutorial
 tags:
@@ -423,3 +423,7 @@ output[output['sentiment']=="Positive"]
 
 **Congratulations!** Now we are able to use spaCy's rule-matching feature to detect pattern in the text for text classification. However, I find that defining rules and adding it into matching engine is quite tedious. Imagine if we have more than 20 or 100 rules, how many line of codes we are going to repeat in this step? <br></br>
 To solve this issue, I have come up with a solution to make this process more efficient. I'll write up an article on this topic soon. Stay tune! :D
+
+
+Cover Photo by <a href="https://unsplash.com/@leookubo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leonardo Toshiro Okubo</a> on <a href="https://unsplash.com/s/photos/language?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

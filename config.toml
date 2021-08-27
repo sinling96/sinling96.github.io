@@ -20,12 +20,12 @@ DefaultContentLanguage = "en"                   # Theme i18n support
         lastUpdated = "Jan 02, 2006 15:04 MST"
         
     [params.sidebar]
-        emoji = "🍀"
+        emoji = "👋"
         avatar = "img/profile_pic.png"
-        subtitle = "💼   Data Analyst at Teleport"
-        subtitle2 = "👩   ISFJ | Perfectionist"
-        subtitle3 = "☁️   Data Scientist Wanna-Be"
-
+        subtitle = "✼ Data Analyst"
+        subtitle2 = "✼ ISFJ"
+        subtitle3 = "✼ Perfectionist"
+        subtitle4 = "✼ MY 🇲🇾 "
     [params.article]
         math = false
         [params.article.license]

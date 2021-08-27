@@ -1,3 +1,15 @@
+---
+title: "Beginner Tutorial - Ploting Geo Map using MapBox and Plotly using Latitude and Longtitude"
+date: 2021-08-27
+slug: "plotly-mapbox-geomap2"
+image: "artistic_map.jpg"
+draft: true
+categories:
+    - Tutorial
+tags:
+  - Geo Map
+  - Python
+---
 
 # Generate Geo Map using Google Sheets Data
 
@@ -960,3 +972,6 @@ we can only place 1 data (Name of the restaurant) in the map.
 
 
 To add more data, we need to explore this customdata property --> https://chart-studio.plotly.com/~empet/15366/customdata-for-a-few-plotly-chart-types/#/
+
+Photo by <a href="https://unsplash.com/@tjump?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nik Shuliahin</a> on <a href="https://unsplash.com/s/photos/shop-location-map?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
