@@ -6,7 +6,167 @@
         <description>Recent content on Sinling</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchan.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchan.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY</title>
+        <link>https://sinlingchan.com/p/plotly-mapbox-geomap/</link>
+        <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://sinlingchan.com/p/plotly-mapbox-geomap/</guid>
+        <description>&lt;img src="https://sinlingchan.com/p/plotly-mapbox-geomap/map.jpeg" alt="Featured image of post How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY" /&gt;&lt;p&gt;Ever wonder how to create a &lt;strong&gt;customized&lt;/strong&gt; and &lt;strong&gt;interactive&lt;/strong&gt; geographical map using Python (for &lt;strong&gt;free&lt;/strong&gt;)?&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ve come to the right place!&lt;/p&gt;
+&lt;p&gt;This is a simple tutorial on how to set up &lt;strong&gt;MapBox&lt;/strong&gt; and &lt;strong&gt;Plotly&lt;/strong&gt; to visualise map data.&lt;/p&gt;
+&lt;p&gt;At the end of this tutorial, you will be creating your first map that looks like this 👇
+&lt;figure&gt;
+		&lt;a href=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png&#34; data-size=&#34;1838x778&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png&#34; width=&#34;1838&#34; height=&#34;778&#34; loading=&#34;lazy&#34;
+				alt=&#34;&amp;nbsp;&#34;&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This article is written based on my coding experience in &lt;strong&gt;Google Collab&lt;/strong&gt;, so there might be some part which is irrelevant to those using Python in your local computer.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I am a &lt;strong&gt;complete beginner&lt;/strong&gt; in geo visualisation, this guide is intended for those are are looking for an easy way to start visualise map in the data projects. Appreciate any feedback if any&lt;/em&gt; :)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Pre-requisites&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MapBox Account and Access Token&lt;/li&gt;
+&lt;li&gt;Python Libraries: Pandas &amp;amp; Plotly&lt;/li&gt;
+&lt;li&gt;Google Account/ Google Collab&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;💡 &lt;em&gt;Don&amp;rsquo;t have the pre-requisites listed above? Don&amp;rsquo;t worry! We&amp;rsquo;ll cover everything to help you get them.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;-outline&#34;&gt;&amp;raquo; Outline&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Outline is provided in case you wish to revisit certain topics.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;#part-1-mapbox-setup&#34;  title=&#34;Part1&#34;
+    &gt;Part 1: Mapbox Setup&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.1 Register for MapBox Account&lt;/li&gt;
+&lt;li&gt;1.2 Get your Public Token&lt;/li&gt;
+&lt;li&gt;1.3 Save your Token&lt;/li&gt;
+&lt;li&gt;1.4 Read your Token File to Python Environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;#part-2-python-libraries-installation-in-google-collab&#34;  title=&#34;Part2&#34;
+    &gt;Part 2: Python Libraries Installation in Google Collab&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;#part-3-your-first-map-with-plotly--mapbox&#34;  title=&#34;Part 3&#34;
+    &gt;Part 3: Plot your First Map&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;part-1-mapbox-setup&#34;&gt;Part 1: MapBox Setup&lt;/h2&gt;
+&lt;p&gt;&lt;figure&gt;
+		&lt;a href=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_homepage.png&#34; data-size=&#34;1036x580&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_homepage_hu18e40c9265e567e56c3f8aef986635c8_95213_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_homepage_hu18e40c9265e567e56c3f8aef986635c8_95213_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_homepage.png&#34; width=&#34;1036&#34; height=&#34;580&#34; loading=&#34;lazy&#34;
+				alt=&#34;Mapbox Homepage&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Mapbox Homepage&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mapbox&lt;/strong&gt; is a powerful tool to build interactive maps. According to Mapbox own words, &amp;ldquo;Mapbox is a location data platform that powers the maps and location services.&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Some popular apps like &lt;strong&gt;Snapchat&lt;/strong&gt;, &lt;strong&gt;Lonely Planet&lt;/strong&gt;, and even Business Intelligence Tool like &lt;strong&gt;Tableau&lt;/strong&gt; are also utilising mapbox technology to empower more analyst and developer to visualise geospatial data at ease!&lt;/p&gt;
+&lt;p&gt;To use Mapbox mapping services, we need to register for an account at &lt;a class=&#34;link&#34; href=&#34;http://www.mapbox.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mapbox.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rest assured no cost would be incurred, because &lt;strong&gt;no credit card required&lt;/strong&gt;! * YAY *&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Just to make it clear, it&amp;rsquo;s &lt;strong&gt;not a completely free product&lt;/strong&gt;. Mapbox do charge if your usage exceed certain threshold.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;But as a data analyst that just need an interactive map to visualise geo data, it&amp;rsquo;s unlikely that you&amp;rsquo;ll exceed that limit.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;step-2-get-your-public-token&#34;&gt;Step 2: Get your Public Token&lt;/h3&gt;
+&lt;p&gt;Once you completed the registration process, you need to login to your account and go to this &lt;a class=&#34;link&#34; href=&#34;https://account.mapbox.com/access-tokens/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;page&lt;/a&gt; to get your access token.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+		&lt;a href=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_accesstoken.png&#34; data-size=&#34;986x371&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_accesstoken_hu4573e12b04f3a602758c3c84a259cb3d_69750_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_accesstoken_hu4573e12b04f3a602758c3c84a259cb3d_69750_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mapbox_accesstoken.png&#34; width=&#34;986&#34; height=&#34;371&#34; loading=&#34;lazy&#34;
+				alt=&#34;Click on the clipboard icon to copy your public token.&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Click on the clipboard icon to copy your public token.&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-3-save-your-token&#34;&gt;Step 3: Save your Token&lt;/h3&gt;
+&lt;p&gt;Now we need to save the token in a text file (with .txt extension) and upload it to Google Drive. This additional step is &lt;strong&gt;highly recommended&lt;/strong&gt;, but not compulsory.&lt;/p&gt;
+&lt;p&gt;This way of accessing the token makes sure that you don&amp;rsquo;t accidentally share your access token in your source code, especially if you are working with others collaboratively on the same project.&lt;/p&gt;
+&lt;h3 id=&#34;step-4-read-the-token-to-python-environment&#34;&gt;Step 4: Read the Token to Python Environment&lt;/h3&gt;
+&lt;p&gt;We are all set now! Let&amp;rsquo;s create a new noteboook in &lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/notebooks/intro.ipynb?utm_source=scs-index#recent=true&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google Collab&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+		&lt;a href=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/google_colab_homepage.png&#34; data-size=&#34;986x647&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/google_colab_homepage_hu508fe551d6ba80af294ac65b7360e2ee_77482_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/plotly-mapbox-geomap/google_colab_homepage_hu508fe551d6ba80af294ac65b7360e2ee_77482_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/google_colab_homepage.png&#34; width=&#34;986&#34; height=&#34;647&#34; loading=&#34;lazy&#34;
+				alt=&#34;Hit &amp;ldquo;New Notebook&amp;rdquo; at the bottom to start coding.&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Hit “New Notebook” at the bottom to start coding.&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Next, we need to &lt;strong&gt;mount Google Drive&lt;/strong&gt; to our notebook. Mounting Google Drive enable us to read files located in Google Drive directly without uploading to Colab workspace.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;google.colab&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;drive&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;drive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mount&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/content/drive&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure&gt;
+		&lt;a href=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mount_gdrive.gif&#34; data-size=&#34;928x578&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mount_gdrive_hu4d0c6b45998247dec37719e8f5805160_2317876_480x0_resize_box.gif 480w, https://sinlingchan.com/p/plotly-mapbox-geomap/mount_gdrive_hu4d0c6b45998247dec37719e8f5805160_2317876_1024x0_resize_box.gif 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/mount_gdrive.gif&#34; width=&#34;928&#34; height=&#34;578&#34; loading=&#34;lazy&#34;
+				alt=&#34;Click image to view the steps to mount Google Drive to Colab Notebook.&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;Click image to view the steps to mount Google Drive to Colab Notebook.&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;In short, you&amp;rsquo;ll need to click on the link shown in the terminal. Then, login to your Google Account to get the authorization code. Copy the code and paste in the input box in Notebook.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Why do we need to mount GDrive instead of uploading it directly to Colab?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you upload the token file directly to Colab, &lt;strong&gt;your data would no longer be acessible when you disconnected&lt;/strong&gt;. This simply means everytime you work on the project, you&amp;rsquo;d need to &lt;strong&gt;reimport&lt;/strong&gt; the files or dataset again.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now, get the file path of the token file you just uploaded and replace the placeholder below ( &lt;em&gt;{enter your file path}&lt;/em&gt; ). If you not sure how to get it, read this &lt;strong&gt;article&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;my_token&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;{enter your file path}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;part-2-python-libraries-installation-in-google-colab&#34;&gt;Part 2: Python Libraries Installation in Google Colab&lt;/h2&gt;
+&lt;p&gt;As mentioned earlier, we need &lt;strong&gt;2 Python libraries&lt;/strong&gt;:-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;pandas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pandas&lt;/strong&gt; library is already pre-installed in Colab. So you don&amp;rsquo;t have to install it. We won&amp;rsquo;t be using this package in this tutorial, but we&amp;rsquo;ll need it in the next tutorial if you&amp;rsquo;d like to follow along.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;plotly&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;%28https://plotly.com/python/getting-started/%29&#34; &gt;Plotly&lt;/a&gt;&lt;/strong&gt; Python library is an &lt;strong&gt;interactive, open-source plotting library&lt;/strong&gt; that supports over 40 unique chart types covering a wide range of &lt;em&gt;statistical&lt;/em&gt;, &lt;em&gt;financial&lt;/em&gt;, &lt;em&gt;geographic&lt;/em&gt;, &lt;em&gt;scientific&lt;/em&gt;, and &lt;em&gt;3-dimensional&lt;/em&gt; use-cases.&lt;/p&gt;
+&lt;p&gt;To install in Google Collab, simply copy paste code below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plotly&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;5.2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡  We use disclaimer &amp;ldquo;!&amp;rdquo; to specify &lt;strong&gt;terminal command&lt;/strong&gt; in Jupyter Notebook.*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;part-3-your-first-map-with-plotly--mapbox&#34;&gt;Part 3: Your First Map with Plotly &amp;amp; MapBox&lt;/h2&gt;
+&lt;p&gt;Simply run the code below to test if everything was set up correctly.&lt;/p&gt;
+&lt;p&gt;Here we are using sample dataset from the package to generate the graph.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;plotly.express&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;px&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_mapbox_access_token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my_token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;carshare&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scatter_mapbox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;centroid_lat&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lon&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;centroid_lon&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;     
+                        &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;peak_hour&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;car_hours&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;n&#34;&gt;color_continuous_scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;colors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cyclical&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IceFire&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+                        &lt;span class=&#34;n&#34;&gt;size_max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;zoom&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Congratulations!&lt;/strong&gt;
+You should see this beautiful chart now 💖&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+		&lt;a href=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png&#34; data-size=&#34;1838x778&#34;&gt;
+			&lt;img srcset=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_1024x0_resize_box_2.png 1024w&#34;
+				src=&#34;https://sinlingchan.com/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png&#34; width=&#34;1838&#34; height=&#34;778&#34; loading=&#34;lazy&#34;
+				alt=&#34;&amp;nbsp;&#34;&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Eager to learn more about application or use case that powered by Mapbox?&lt;/strong&gt;  Visit &lt;a class=&#34;link&#34; href=&#34;https://www.mapbox.com/showcase&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mapbox Showcase&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Credit: Cover Photo by Tamas Tuzes-Katai - Unsplash&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Must know shortcut keys in Jupyter Notebook</title>
         <link>https://sinlingchan.com/p/shortcut-keys-in-jupyter-notebook/</link>
         <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
@@ -19,7 +179,7 @@
 &lt;p&gt;In this document, I will list down several shortcut that I find useful in navigating Jupyter Notebook.&lt;/p&gt;
 &lt;p&gt;Note: These shortcut can be applied to both Jupyter Notebook and Jupyter Lab, except for the customized shortcut, which is only available in Jupyter Lab as far as I understand.&lt;/p&gt;
 &lt;h2 id=&#34;1-convert-cell-to-md&#34;&gt;1. Convert cell to md&lt;/h2&gt;
-&lt;p&gt;As a data analysts, I used both code and markdown very frequently in my notebook. By default, all the cells in Jupyter notebook is code. To convert it to a markdown cell, we can use the UI (dropdown) to select markdown. 
+&lt;p&gt;As a data analysts, I used both code and markdown very frequently in my notebook. By default, all the cells in Jupyter notebook is code. To convert it to a markdown cell, we can use the UI (dropdown) to select markdown.
 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
 Alternatively, use a shortcut:
 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
@@ -91,7 +251,7 @@ Go to the Setting &amp;gt; Advanced Settings Editor.&lt;/p&gt;
         <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
         
         <guid>https://sinlingchan.com/p/spacyintro/</guid>
-        <description>&lt;img src="https://sinlingchan.com/p/spacyintro/raphael-schaller-GkinCd2enIY-unsplash.jpg" alt="Featured image of post Text Classification using spaCy (Intro)" /&gt;&lt;p&gt;Despite the rapid development of AI technology, there are still a huge amount of text data remained undiscovered. Unstructured data contains a lot of data that would be useful if we know how to transform unstructured data to structured data.&lt;/p&gt;
+        <description>&lt;img src="https://sinlingchan.com/p/spacyintro/girl-writing-classroom-quote.jpg" alt="Featured image of post Text Classification using spaCy (Intro)" /&gt;&lt;p&gt;Despite the rapid development of AI technology, there are still a huge amount of text data remained undiscovered. Unstructured data contains a lot of data that would be useful if we know how to transform unstructured data to structured data.&lt;/p&gt;
 &lt;p&gt;In today&amp;rsquo;s tutorial, we are going to explore how we can classified text data to specific categories which could be useful for the analysis, by using Python package &lt;a class=&#34;link&#34; href=&#34;https://spacy.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;spaCy&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;what-is-spacy&#34;&gt;What is spaCy?&lt;/h1&gt;
@@ -115,7 +275,7 @@ py -m spacy download en_core_web_sm
 &lt;p&gt;If you would like to understand more about rule based matching, feel free to jump into the &lt;a class=&#34;link&#34; href=&#34;https://spacy.io/usage/rule-based-matching&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;objective&#34;&gt;Objective&lt;/h1&gt;
-&lt;p&gt;The objective of this tutorial is to &lt;strong&gt;detect the sentiment of the review&lt;/strong&gt; using rule-based matching in spaCy. Well, spaCy rule matching is definitely not be the best way to detect sentiment in the text, but we are just using it as a use case to demo how we can use spaCy for text classification. 
+&lt;p&gt;The objective of this tutorial is to &lt;strong&gt;detect the sentiment of the review&lt;/strong&gt; using rule-based matching in spaCy. Well, spaCy rule matching is definitely not be the best way to detect sentiment in the text, but we are just using it as a use case to demo how we can use spaCy for text classification.
 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
 One of the application of this would be classifying &lt;strong&gt;Work from Home Difficulties&lt;/strong&gt; into categories such as:&lt;/p&gt;
 &lt;ul&gt;
@@ -236,6 +396,7 @@ In NLP context,
 &lt;h3 id=&#34;tedious&#34;&gt;Tedious?&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Congratulations!&lt;/strong&gt; Now we are able to use spaCy&amp;rsquo;s rule-matching feature to detect pattern in the text for text classification. However, I find that defining rules and adding it into matching engine is quite tedious. Imagine if we have more than 20 or 100 rules, how many line of codes we are going to repeat in this step? &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
 To solve this issue, I have come up with a solution to make this process more efficient. I&amp;rsquo;ll write up an article on this topic soon. Stay tune! :D&lt;/p&gt;
+&lt;p&gt;Cover Photo by &lt;!-- raw HTML omitted --&gt;Leonardo Toshiro Okubo&lt;!-- raw HTML omitted --&gt; on &lt;!-- raw HTML omitted --&gt;Unsplash&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -256,7 +417,7 @@ To solve this issue, I have come up with a solution to make this process more ef
 		&lt;/a&gt;
 		
 	&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;Next, click on &lt;em&gt;Keyboard Shortcuts&lt;/em&gt;. You will see two pane side by side: &lt;em&gt;System Default&lt;/em&gt; and &lt;em&gt;User Preference&lt;/em&gt;. 
+&lt;p&gt;Next, click on &lt;em&gt;Keyboard Shortcuts&lt;/em&gt;. You will see two pane side by side: &lt;em&gt;System Default&lt;/em&gt; and &lt;em&gt;User Preference&lt;/em&gt;.
 &lt;figure&gt;
 		&lt;a href=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2.png&#34; data-size=&#34;1366x768&#34;&gt;
 			&lt;img srcset=&#34;https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_480x0_resize_box_2.png 480w, https://sinlingchan.com/p/jupyter-lab-custom-keyboard-shortcut/B3-2_huba9749c9487b30a18dc7f13fa0f30431_161208_1024x0_resize_box_2.png 1024w&#34;
@@ -293,7 +454,7 @@ To solve this issue, I have come up with a solution to make this process more ef
         <description>&lt;img src="https://sinlingchan.com/p/how-i-learn-r/Blog1-Notes.JPG" alt="Featured image of post How I Learn R" /&gt;&lt;p&gt;When I was studying in the university, I learnt R programming to complete my final year project, Text Sentiment Analysis and Topic Modeling. It was a nightmare for me as the tasks were not as easy as I thought, especially for someone without strong foundation in data science programming languages (e.g. R, Python).&lt;/p&gt;
 &lt;p&gt;For a complete beginner, there are plenty of resources you could easily find to pick up a new programming language. Bad new is sometimes there are too much resources that I just could not make up my mind to just choose one. After more than one year of dealing with R (haha), I thought I should share some of my tips in learning R for data analysis.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1. Read Books&lt;/strong&gt;
-&lt;img src=&#34;https://rstudio-education.github.io/hopr/cover.png&#34; alt=&#34;&#34;  /&gt; 
+&lt;img src=&#34;https://rstudio-education.github.io/hopr/cover.png&#34; alt=&#34;&#34;  /&gt;
 For a complete beginner like me, going through &lt;a class=&#34;link&#34; href=&#34;https://rstudio-education.github.io/hopr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hands-On Programming with R&lt;/a&gt; is super useful for me! It strengthens my understanding on how R works and how to write a more &amp;ldquo;R-slang&amp;rdquo;-like code. Even though the book is lengthy, it is well structured and written. The programming concepts I learned from this book also build my foundation well that I could easily pick up Python when I started working. A KIND Reminder: &amp;ldquo;Don&amp;rsquo;t skip the hands-on session&amp;rdquo; - This is where you can put theory into practice.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2. Writing Notes&lt;/strong&gt;

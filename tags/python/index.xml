@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Sinling</title>
+    <link>https://sinlingchan.com/tags/python/</link>
+    <description>Recent content in Python on Sinling</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sinlingchan.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY</title>
+      <link>https://sinlingchan.com/p/plotly-mapbox-geomap/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinlingchan.com/p/plotly-mapbox-geomap/</guid>
+      <description>Ever wonder how to create a customized and interactive geographical map using Python (for free)?
+You&amp;rsquo;ve come to the right place!
+This is a simple tutorial on how to set up MapBox and Plotly to visualise map data.
+At the end of this tutorial, you will be creating your first map that looks like this 👇   
+Notes
+This article is written based on my coding experience in Google Collab, so there might be some part which is irrelevant to those using Python in your local computer.</description>
+    </item>
+    
+  </channel>
+</rss>

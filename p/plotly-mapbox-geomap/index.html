@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Ever wonder how to create a customized and interactive geographical map using Python (for free)?
+You&amp;rsquo;ve come to the right place!
+This is a simple tutorial on how to set up MapBox and Plotly to visualise map data.
+At the end of this tutorial, you will be creating your first map that looks like this 👇   
+Notes
+This article is written based on my coding experience in Google Collab, so there might be some part which is irrelevant to those using Python in your local computer.'><title>How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY</title>
+    
+    <link rel='canonical' href='https://sinlingchan.com/p/plotly-mapbox-geomap/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY'>
+<meta property='og:description' content='Ever wonder how to create a customized and interactive geographical map using Python (for free)?
+You&amp;rsquo;ve come to the right place!
+This is a simple tutorial on how to set up MapBox and Plotly to visualise map data.
+At the end of this tutorial, you will be creating your first map that looks like this 👇   
+Notes
+This article is written based on my coding experience in Google Collab, so there might be some part which is irrelevant to those using Python in your local computer.'>
+<meta property='og:url' content='https://sinlingchan.com/p/plotly-mapbox-geomap/'>
+<meta property='og:site_name' content='Sinling'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Geo Map' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2021-08-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-08-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://sinlingchan.com/p/plotly-mapbox-geomap/map.jpeg' />
+<meta name="twitter:title" content="How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY">
+<meta name="twitter:description" content="Ever wonder how to create a customized and interactive geographical map using Python (for free)?
+You&amp;rsquo;ve come to the right place!
+This is a simple tutorial on how to set up MapBox and Plotly to visualise map data.
+At the end of this tutorial, you will be creating your first map that looks like this 👇   
+Notes
+This article is written based on my coding experience in Google Collab, so there might be some part which is irrelevant to those using Python in your local computer."><meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content='https://sinlingchan.com/p/plotly-mapbox-geomap/map.jpeg' /></head><body class="">
+        <div class="container flex on-phone--column align-items--flex-start extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+        <figure class="site-avatar">
+            
+
+            
+            
+            <img src="/img/profile_pic_hub8ca947f9e76f7b33422f0387bdda5e9_799362_300x300_resize_box_2.png" width="300"
+                height="300" class="site-logo" loading="lazy" alt="Avatar">
+            
+
+            <span class="emoji">👋</span>
+        </figure>
+        
+        <h1 class="site-name"><a href="https://sinlingchan.com">Sinling</a></h1>
+        <h2 class="site-description">✼ Data Analyst</h2>
+        <h2 class="site-description">✼ ISFJ</h2>
+        <h2 class="site-description">✼ Perfectionist</h2>
+        <h2 class="site-description">✼ MY 🇲🇾 </h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='https://sinlingchan.com/'>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://sinlingchan.com/about'>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://sinlingchan.com/posts'>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Posts</span>
+            </a>
+        </li>
+        
+    </ol>
+</aside>
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://sinlingchan.com" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <img srcset="/p/plotly-mapbox-geomap/map_hu3d03a01dcc18bc5be0e67db3d8d209a6_68763_1024x0_resize_q75_box.jpeg 1024w, /p/plotly-mapbox-geomap/map_hu3d03a01dcc18bc5be0e67db3d8d209a6_68763_2000x0_resize_q75_box.jpeg 2000w"
+                    src="/p/plotly-mapbox-geomap/map_hu3d03a01dcc18bc5be0e67db3d8d209a6_68763_2000x0_resize_q75_box.jpeg" width="700" height="875" loading="lazy"
+                    alt="Featured image of post How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY" />
+            
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="https://sinlingchan.com/categories/tutorial/" 
+                    class="color-tag"
+                    data-image="/p/plotly-mapbox-geomap/map_hu3d03a01dcc18bc5be0e67db3d8d209a6_68763_20x20_fill_q75_box_smart1.jpeg" 
+                    data-key="plotly-mapbox-geomap" 
+                    data-hash="md5-mM19FOh/sw89TD9kUlQHBQ==">
+                    Tutorial
+                </a>
+            
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="https://sinlingchan.com/p/plotly-mapbox-geomap/">How to Plot Geo Map using MapBox and Plotly (FREE) - BEGINNER-FRIENDLY</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 27, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>Ever wonder how to create a <strong>customized</strong> and <strong>interactive</strong> geographical map using Python (for <strong>free</strong>)?</p>
+<p>You&rsquo;ve come to the right place!</p>
+<p>This is a simple tutorial on how to set up <strong>MapBox</strong> and <strong>Plotly</strong> to visualise map data.</p>
+<p>At the end of this tutorial, you will be creating your first map that looks like this 👇
+<figure>
+		<a href="/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png" data-size="1838x778">
+			<img srcset="/p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_480x0_resize_box_2.png 480w, /p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_1024x0_resize_box_2.png 1024w"
+				src="/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png" width="1838" height="778" loading="lazy"
+				alt="&nbsp;">
+		</a>
+		
+	</figure></p>
+<p><strong>Notes</strong></p>
+<p><em>This article is written based on my coding experience in <strong>Google Collab</strong>, so there might be some part which is irrelevant to those using Python in your local computer.</em></p>
+<p><em>I am a <strong>complete beginner</strong> in geo visualisation, this guide is intended for those are are looking for an easy way to start visualise map in the data projects. Appreciate any feedback if any</em> :)</p>
+<blockquote>
+<p><strong>Pre-requisites</strong></p>
+<ol>
+<li>MapBox Account and Access Token</li>
+<li>Python Libraries: Pandas &amp; Plotly</li>
+<li>Google Account/ Google Collab</li>
+</ol>
+<p>💡 <em>Don&rsquo;t have the pre-requisites listed above? Don&rsquo;t worry! We&rsquo;ll cover everything to help you get them.</em></p>
+</blockquote>
+<h3 id="-outline">&raquo; Outline</h3>
+<p><em>Outline is provided in case you wish to revisit certain topics.</em></p>
+<p><strong><a class="link" href="#part-1-mapbox-setup"  title="Part1"
+    >Part 1: Mapbox Setup</a></strong></p>
+<ul>
+<li>1.1 Register for MapBox Account</li>
+<li>1.2 Get your Public Token</li>
+<li>1.3 Save your Token</li>
+<li>1.4 Read your Token File to Python Environment</li>
+</ul>
+<p><strong><a class="link" href="#part-2-python-libraries-installation-in-google-collab"  title="Part2"
+    >Part 2: Python Libraries Installation in Google Collab</a></strong></p>
+<p><strong><a class="link" href="#part-3-your-first-map-with-plotly--mapbox"  title="Part 3"
+    >Part 3: Plot your First Map</a></strong></p>
+<hr>
+<h2 id="part-1-mapbox-setup">Part 1: MapBox Setup</h2>
+<p><figure>
+		<a href="/p/plotly-mapbox-geomap/mapbox_homepage.png" data-size="1036x580">
+			<img srcset="/p/plotly-mapbox-geomap/mapbox_homepage_hu18e40c9265e567e56c3f8aef986635c8_95213_480x0_resize_box_2.png 480w, /p/plotly-mapbox-geomap/mapbox_homepage_hu18e40c9265e567e56c3f8aef986635c8_95213_1024x0_resize_box_2.png 1024w"
+				src="/p/plotly-mapbox-geomap/mapbox_homepage.png" width="1036" height="580" loading="lazy"
+				alt="Mapbox Homepage">
+		</a>
+		
+		<figcaption>Mapbox Homepage</figcaption>
+		
+	</figure></p>
+<p><strong>Mapbox</strong> is a powerful tool to build interactive maps. According to Mapbox own words, &ldquo;Mapbox is a location data platform that powers the maps and location services.&rdquo;.</p>
+<p>Some popular apps like <strong>Snapchat</strong>, <strong>Lonely Planet</strong>, and even Business Intelligence Tool like <strong>Tableau</strong> are also utilising mapbox technology to empower more analyst and developer to visualise geospatial data at ease!</p>
+<p>To use Mapbox mapping services, we need to register for an account at <a class="link" href="http://www.mapbox.com"  target="_blank" rel="noopener"
+    >mapbox.com</a>.</p>
+<p>Rest assured no cost would be incurred, because <strong>no credit card required</strong>! * YAY *</p>
+<blockquote>
+<p><em>Just to make it clear, it&rsquo;s <strong>not a completely free product</strong>. Mapbox do charge if your usage exceed certain threshold.</em></p>
+<p><em>But as a data analyst that just need an interactive map to visualise geo data, it&rsquo;s unlikely that you&rsquo;ll exceed that limit.</em></p>
+</blockquote>
+<h3 id="step-2-get-your-public-token">Step 2: Get your Public Token</h3>
+<p>Once you completed the registration process, you need to login to your account and go to this <a class="link" href="https://account.mapbox.com/access-tokens/"  target="_blank" rel="noopener"
+    >page</a> to get your access token.</p>
+<p><figure>
+		<a href="/p/plotly-mapbox-geomap/mapbox_accesstoken.png" data-size="986x371">
+			<img srcset="/p/plotly-mapbox-geomap/mapbox_accesstoken_hu4573e12b04f3a602758c3c84a259cb3d_69750_480x0_resize_box_2.png 480w, /p/plotly-mapbox-geomap/mapbox_accesstoken_hu4573e12b04f3a602758c3c84a259cb3d_69750_1024x0_resize_box_2.png 1024w"
+				src="/p/plotly-mapbox-geomap/mapbox_accesstoken.png" width="986" height="371" loading="lazy"
+				alt="Click on the clipboard icon to copy your public token.">
+		</a>
+		
+		<figcaption>Click on the clipboard icon to copy your public token.</figcaption>
+		
+	</figure></p>
+<h3 id="step-3-save-your-token">Step 3: Save your Token</h3>
+<p>Now we need to save the token in a text file (with .txt extension) and upload it to Google Drive. This additional step is <strong>highly recommended</strong>, but not compulsory.</p>
+<p>This way of accessing the token makes sure that you don&rsquo;t accidentally share your access token in your source code, especially if you are working with others collaboratively on the same project.</p>
+<h3 id="step-4-read-the-token-to-python-environment">Step 4: Read the Token to Python Environment</h3>
+<p>We are all set now! Let&rsquo;s create a new noteboook in <a class="link" href="https://colab.research.google.com/notebooks/intro.ipynb?utm_source=scs-index#recent=true"  target="_blank" rel="noopener"
+    >Google Collab</a>.</p>
+<p><figure>
+		<a href="/p/plotly-mapbox-geomap/google_colab_homepage.png" data-size="986x647">
+			<img srcset="/p/plotly-mapbox-geomap/google_colab_homepage_hu508fe551d6ba80af294ac65b7360e2ee_77482_480x0_resize_box_2.png 480w, /p/plotly-mapbox-geomap/google_colab_homepage_hu508fe551d6ba80af294ac65b7360e2ee_77482_1024x0_resize_box_2.png 1024w"
+				src="/p/plotly-mapbox-geomap/google_colab_homepage.png" width="986" height="647" loading="lazy"
+				alt="Hit &ldquo;New Notebook&rdquo; at the bottom to start coding.">
+		</a>
+		
+		<figcaption>Hit “New Notebook” at the bottom to start coding.</figcaption>
+		
+	</figure></p>
+<p>Next, we need to <strong>mount Google Drive</strong> to our notebook. Mounting Google Drive enable us to read files located in Google Drive directly without uploading to Colab workspace.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</code></pre></div><p><figure>
+		<a href="/p/plotly-mapbox-geomap/mount_gdrive.gif" data-size="928x578">
+			<img srcset="/p/plotly-mapbox-geomap/mount_gdrive_hu4d0c6b45998247dec37719e8f5805160_2317876_480x0_resize_box.gif 480w, /p/plotly-mapbox-geomap/mount_gdrive_hu4d0c6b45998247dec37719e8f5805160_2317876_1024x0_resize_box.gif 1024w"
+				src="/p/plotly-mapbox-geomap/mount_gdrive.gif" width="928" height="578" loading="lazy"
+				alt="Click image to view the steps to mount Google Drive to Colab Notebook.">
+		</a>
+		
+		<figcaption>Click image to view the steps to mount Google Drive to Colab Notebook.</figcaption>
+		
+	</figure></p>
+<p>In short, you&rsquo;ll need to click on the link shown in the terminal. Then, login to your Google Account to get the authorization code. Copy the code and paste in the input box in Notebook.</p>
+<blockquote>
+<p><strong>Why do we need to mount GDrive instead of uploading it directly to Colab?</strong></p>
+<p>If you upload the token file directly to Colab, <strong>your data would no longer be acessible when you disconnected</strong>. This simply means everytime you work on the project, you&rsquo;d need to <strong>reimport</strong> the files or dataset again.</p>
+</blockquote>
+<p>Now, get the file path of the token file you just uploaded and replace the placeholder below ( <em>{enter your file path}</em> ). If you not sure how to get it, read this <strong>article</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">my_token</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;{enter your file path}&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre></div><hr>
+<h2 id="part-2-python-libraries-installation-in-google-colab">Part 2: Python Libraries Installation in Google Colab</h2>
+<p>As mentioned earlier, we need <strong>2 Python libraries</strong>:-</p>
+<ul>
+<li>
+<p><strong>pandas</strong></p>
+<p><strong>Pandas</strong> library is already pre-installed in Colab. So you don&rsquo;t have to install it. We won&rsquo;t be using this package in this tutorial, but we&rsquo;ll need it in the next tutorial if you&rsquo;d like to follow along.</p>
+</li>
+<li>
+<p><strong>plotly</strong></p>
+<p><strong><a class="link" href="%28https://plotly.com/python/getting-started/%29" >Plotly</a></strong> Python library is an <strong>interactive, open-source plotting library</strong> that supports over 40 unique chart types covering a wide range of <em>statistical</em>, <em>financial</em>, <em>geographic</em>, <em>scientific</em>, and <em>3-dimensional</em> use-cases.</p>
+<p>To install in Google Collab, simply copy paste code below.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">plotly</span><span class="o">==</span><span class="mf">5.2</span><span class="o">.</span><span class="mi">1</span>
+</code></pre></div></li>
+</ul>
+<blockquote>
+<p>💡  We use disclaimer &ldquo;!&rdquo; to specify <strong>terminal command</strong> in Jupyter Notebook.*</p>
+</blockquote>
+<hr>
+<h2 id="part-3-your-first-map-with-plotly--mapbox">Part 3: Your First Map with Plotly &amp; MapBox</h2>
+<p>Simply run the code below to test if everything was set up correctly.</p>
+<p>Here we are using sample dataset from the package to generate the graph.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="kn">as</span> <span class="nn">px</span>
+<span class="n">px</span><span class="o">.</span><span class="n">set_mapbox_access_token</span><span class="p">(</span><span class="n">my_token</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">carshare</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_mapbox</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="s2">&#34;centroid_lat&#34;</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="s2">&#34;centroid_lon&#34;</span><span class="p">,</span>     
+                        <span class="n">color</span><span class="o">=</span><span class="s2">&#34;peak_hour&#34;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s2">&#34;car_hours&#34;</span><span class="p">,</span>
+                        <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">cyclical</span><span class="o">.</span><span class="n">IceFire</span><span class="p">,</span> 
+                        <span class="n">size_max</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div><p><strong>Congratulations!</strong>
+You should see this beautiful chart now 💖</p>
+<p><figure>
+		<a href="/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png" data-size="1838x778">
+			<img srcset="/p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_480x0_resize_box_2.png 480w, /p/plotly-mapbox-geomap/plotly_mapbox_first_map_hu959c5b69032162277742f59e1ad415dc_730283_1024x0_resize_box_2.png 1024w"
+				src="/p/plotly-mapbox-geomap/plotly_mapbox_first_map.png" width="1838" height="778" loading="lazy"
+				alt="&nbsp;">
+		</a>
+		
+	</figure></p>
+<hr>
+<p><strong>Eager to learn more about application or use case that powered by Mapbox?</strong>  Visit <a class="link" href="https://www.mapbox.com/showcase"  target="_blank" rel="noopener"
+    >Mapbox Showcase</a>!</p>
+<p>Credit: Cover Photo by Tamas Tuzes-Katai - Unsplash</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="https://sinlingchan.com/tags/geo-map/">Geo Map</a>
+        
+            <a href="https://sinlingchan.com/tags/python/">Python</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="https://sinlingchan.com/p/spacyintro/">
+        
+        
+            <div class="article-image">
+                <img src="/p/spacyintro/girl-writing-classroom-quote_hu23fde5711bb7c470f050e68d8a841927_1332914_250x150_fill_q75_box_smart1.jpg" width="250" height="150" 
+                        loading="lazy" data-key="spacy(intro)" data-hash="md5-CelBsRiUdLM4QHQkJzdFNg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Text Classification using spaCy (Intro)</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">&copy; 2021 Sinling</section>
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="1.0.5">Stack</a></b> designed by
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" style="display:none">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<link rel="stylesheet" href="/css/highlight/light.min.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/css/highlight/dark.min.css" media="(prefers-color-scheme: dark)">
+
+    </body>
+</html>
