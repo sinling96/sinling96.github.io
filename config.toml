@@ -24,7 +24,7 @@ DefaultContentLanguage = "en"                   # Theme i18n support
         avatar = "img/profile_pic.png"
         subtitle = "✼ Data Analyst"
         subtitle2 = "✼ ISFJ"
-        subtitle3 = "✼ Perfectionist"
+        subtitle3 = "✼ Optimizer"
         subtitle4 = "✼ MY 🇲🇾 "
     [params.article]
         math = false
